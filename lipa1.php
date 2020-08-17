@@ -29,7 +29,7 @@
   $Timestamp = date('YmdHis'); // 20190819092612 - yymmddhhmmss
   $PartyA = $_POST["number"]; // 254708003481       $_GET["number"]
   $PartyB = '5214599'; // 7238919
-  $CallBackURL = 'http://vanguardtech.co.ke/mpesa/callback_url.php';
+  $CallBackURL = 'https://streamsofhope.co.ke/callback_url.php';
   $AccountReference = 'cart098'; // can be your invoice number or cart number
   $TransactionDesc = 'cart payment for online service';
   $Amount = '1';
