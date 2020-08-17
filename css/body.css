@@ -30,6 +30,15 @@ body{
 	background-size:cover;
     background-position: right;
 }
+#prevcontent{
+    text-align: left;
+    justify-content: center;
+    min-height: 90vh;
+    /* background-image: url(../images/DrBig.png); */
+	background-repeat: no-repeat;
+	background-size:cover;
+    background-position: right;
+}
 .info{
     margin: auto;
     display: grid;
@@ -49,6 +58,12 @@ body{
     margin-top: 20px;
 }
 .info h1{
+    color: var(--brown2);
+    width: 100%;
+    grid-column: 1/2;
+    margin-bottom: 40px;
+}
+.custh1{
     color: var(--brown2);
     width: 100%;
     grid-column: 1/2;
@@ -180,6 +195,10 @@ form button{
     transition: .3s;
     color: var(--teal);
 }
+
+form .error {
+    color: #ff0000;
+  }
 .contactfooter {
     color: white;
     display: flex;
@@ -207,6 +226,9 @@ form button{
     height: 60vh;
     margin-top: 50px;
     
+}
+.buttons {
+    display:flex;
 }
 
 .contactme{
@@ -278,6 +300,10 @@ form button{
     width: 100%;
 }
 .booksdesc a{
+    text-decoration: none;
+    color: var(--brown);
+}
+.cust-a {
     text-decoration: none;
     color: var(--brown);
 }

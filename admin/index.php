@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dr. Ngotho</title>
-	
 <?php
-    include_once('adminheader.php');
+    include_once('../Auth/session.php');
+    confirm_logged_in();
+
+?>
+
+
+<?php 
+include_once('adminheader.php');
 ?>
 <div id="homecontadmin">
     <div class="infoadmin">
         <h2>WELCOME Dr. NGOTHO</h2>
 
-        <form action="http://vanguardtech.co.ke/mpesa/db.php" method="post" type="form" name="form" enctype="multipart/form-data">
+        <form action="upload.php" method="post" type="form" name="form" enctype="multipart/form-data">
             <div class="card">
                 <div class="cardheader">
                     <h3>ADD BOOK</h3>
@@ -43,3 +45,6 @@
     </div>
     
 </div>
+<?php 
+    include_once('footer.php');
+?>

@@ -20,12 +20,12 @@ if ($upass == ''){
 }else{
 //create some sql statement             
         $sql = "SELECT * FROM  `accounts` WHERE  `username` =  '" . $email . "' AND  `password` =  '" . $h_upass . "'";
-        $result = mysqli_query($conn, $sql);
+        $result = $conn->query($sql);
 
         if ($result){
              //get the number of results based n the sql statement
 
-             echo "user found ....";
+             //echo "user found ....";
         $numrows = mysqli_num_rows($result);
      
         //check the number of result, if equal to one   

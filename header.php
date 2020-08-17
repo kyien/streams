@@ -12,11 +12,11 @@
     <script src="https://kit.fontawesome.com/d4b0d65b41.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
     <link rel="stylesheet" type="text/css" href="css/body.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
     <link rel="shortcut icon" type="img/png" href="favicon.png">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <?php include('footem.php');?>
-    <?php include('contem.php');?>
+
 
 </head>
 

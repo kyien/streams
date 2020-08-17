@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dr. Ngotho</title>
 <meta charset="utf-8">	
     <meta name="viewport" content="width=device-width" initial-scale=1.0, maximum-scale=1/>
     <meta name="description" content="Dr. Ngotho, passion in the Youth Ministry">
@@ -7,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="../css/body.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="shortcut icon" type="img/png" href="../favicon.png">
-	
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
     <div id="page-wrapper">
@@ -23,6 +28,8 @@
                         <ul class="nav-list ">
                             <li ><a href="index.php" ><i class="fas fa-book"></i> Add Books</a></li>
                             <li ><a href="addvideos.php" ><i class="fas fa-video"></i> Add Videos</a></li>
+                            <li ><a href="listcontacts.php" ><i class="fas fa-table"></i> Contact List</a></li>
+                            <li ><a href="../Auth/logout.php" ><i class="fas fa-table"></i> Logout</a></li>
                         </ul>
                     </nav>
             </div>
