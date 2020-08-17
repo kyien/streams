@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$username = "root";
-$password = "kyien";
+$username = "ubunifu";
+$password = "Ubunifu@20";
 $database = "streams";
  
 // Create connection and Check connection
