@@ -34,11 +34,13 @@ include_once('adminheader.php');
                         <div class="input upld">
                             <label for="file">Book File</label>
                             <input type="file" id="file" name="file" class="form-control ">
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" id="save" name="save" required class="btn">ADD BOOK</button>
-                        </div>
+                        </div> 
+                        <!-- <br><br> -->
+                        <!-- <div class="card-footer">
+                        </div> -->
                     </div>
+                    <button type="submit" id="save" name="save" required class="btn btn-warning btn-lg">ADD BOOK</button>
+                        <br>
                 </div>
             </div>
         </form>

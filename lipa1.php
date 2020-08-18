@@ -1,4 +1,5 @@
 <?php
+include_once('Auth/conn.php');
 // generating ACCESS_TOKEN
 
   $consumerKey = '5R9khgKLFGGyvIKKaaEtX1ABCy8VtvJA'; //Fill with your app Consumer Key
@@ -29,7 +30,7 @@
   $Timestamp = date('YmdHis'); // 20190819092612 - yymmddhhmmss
   $PartyA = $_POST["number"]; // 254708003481       $_GET["number"]
   $PartyB = '5214599'; // 7238919
-  $CallBackURL = 'http://vanguardtech.co.ke/mpesa/callback_url.php';
+  $CallBackURL = 'https://streamsofhope.co.ke/callback_url.php';
   $AccountReference = 'cart098'; // can be your invoice number or cart number
   $TransactionDesc = 'cart payment for online service';
   $Amount = '1';
@@ -79,17 +80,17 @@
  sleep(30); // delay in seconds
   
   
-$servername = "localhost";
-$username = "vanguar1_mpesa";
-$password = "mpesa1720!";
-$dbname = "vanguar1_mpesa";
+// $servername = "localhost";
+// $username = "vanguar1_mpesa";
+// $password = "mpesa1720!";
+// $dbname = "vanguar1_mpesa";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $dbname);
+// // Check connection
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
 
 $sql = "SELECT merchantRequestID FROM mpesa_pay WHERE merchantRequestID = '$merchantRequestID' AND resultCode=0 "; // merchant request id gotten from the first response variable
 $result = $conn->query($sql);
@@ -106,9 +107,9 @@ if ($result->num_rows > 0) {
     echo json_encode($myObj);
     
     
-       $f="Tax-Compliance-Certificate.pdf";   
+       $f="Journeying With The Living God.pdf";   
 
-       $file = ("http://vanguardtech.co.ke/wp-content/uploads/2020/08/$f");
+       $file = ("https://streamsofhope.co.ke/uploadBook/$f");
 
        $filetype=filetype($file);
 
