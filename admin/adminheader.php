@@ -29,7 +29,7 @@
                             <li ><a href="index.php" ><i class="fas fa-book"></i> Add Books</a></li>
                             <li ><a href="addvideos.php" ><i class="fas fa-video"></i> Add Videos</a></li>
                             <li ><a href="listcontacts.php" ><i class="fas fa-table"></i> Contact List</a></li>
-                            <li ><a href="../Auth/logout.php" ><i class="fas fa-table"></i> Logout</a></li>
+                            <li ><a href="../Auth/logout.php" ><i class="fas fa-sign-out"></i> Logout</a></li>
                         </ul>
                     </nav>
             </div>
