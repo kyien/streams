@@ -112,25 +112,4 @@
  
  
  
- 
- <?php
-$servername = "localhost";
-$username = "vanguar1_mpesa";
-$password = "mpesa1720!";
-$dbname = "vanguar1_mpesa";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$result = mysql_query("SELECT * FROM books");
-
-while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-    printf("ID: %s  Name: %s", $row[0], $row[1]);  
-}
-
-mysql_free_result($result);
-?>
