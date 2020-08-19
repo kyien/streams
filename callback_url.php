@@ -103,12 +103,12 @@ if ($result->num_rows > 0) {
 }
  */
 
- $stkCallbackResponse = file_get_contents('php://input');
-
-  $logFile = "stkresponse.txt";
-  $log = fopen($logFile, "a");
-  fwrite($log, $callbackJSONData);
-  fclose($log);
+//$stkCallbackResponse = file_get_contents('php://input');
+file_put_contents('php://stderr', print_r($callbackJSONData, TRUE))
+//   $logFile = "stkresponse.txt";
+//   $log = fopen($logFile, "a");
+//   fwrite($log, $callbackJSONData);
+//   fclose($log);
 
 
 ?>
