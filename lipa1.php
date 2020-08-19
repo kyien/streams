@@ -77,7 +77,7 @@ include_once('Auth/conn.php');
 //  echo $merchantRequestID;
   
  
- sleep(30); // delay in seconds
+ sleep(20); // delay in seconds
   
   
 // $servername = "localhost";
