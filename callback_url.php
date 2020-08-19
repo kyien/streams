@@ -105,7 +105,7 @@ if ($result->num_rows > 0) {
 
  $stkCallbackResponse = file_get_contents('php://input');
 
-  $logFile = "stkPushCallbackResponse.json";
+  $logFile = "stkresponse.txt";
   $log = fopen($logFile, "a");
   fwrite($log, $callbackJSONData);
   fclose($log);
