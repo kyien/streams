@@ -4,39 +4,39 @@
 include_once('Auth/conn.php');
 
         $callbackJSONData=file_get_contents('php://input');
-        $callbackData=json_decode($callbackJSONData);
-        $resultCode=$callbackData->Body->stkCallback->ResultCode;
-        $resultDesc=$callbackData->Body->stkCallback->ResultDesc;
-        $merchantRequestID=$callbackData->Body->stkCallback->MerchantRequestID;
-        $checkoutRequestID=$callbackData->Body->stkCallback->CheckoutRequestID;
+       // $callbackData=json_decode($callbackJSONData);
+//         $resultCode=$callbackData->Body->stkCallback->ResultCode;
+//         $resultDesc=$callbackData->Body->stkCallback->ResultDesc;
+//         $merchantRequestID=$callbackData->Body->stkCallback->MerchantRequestID;
+//         $checkoutRequestID=$callbackData->Body->stkCallback->CheckoutRequestID;
 
-        $amount=$callbackData->Body->stkCallback->CallbackMetadata->Item[0]->Value;
-        $mpesaReceiptNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[1]->Value;
-        $balance=$callbackData->Body->stkCallback->CallbackMetadata->Item[2]->Value;
-  //   $b2CUtilityAccountAvailableFunds=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
-        $transactionDate=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
-        $phoneNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[4]->Value;
+//         $amount=$callbackData->Body->stkCallback->CallbackMetadata->Item[0]->Value;
+//         $mpesaReceiptNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[1]->Value;
+//         $balance=$callbackData->Body->stkCallback->CallbackMetadata->Item[2]->Value;
+//   //   $b2CUtilityAccountAvailableFunds=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
+//         $transactionDate=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
+//         $phoneNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[4]->Value;
         
         
     //    echo $phoneNumber;
-     //   $result=[
-     //       $transTime=>$transTime,
-      //      $transAmount=>$transAmount,
-        //    $businessShortCode=>$businessShortCode,
-          //  $billRefNumber=>$billRefNumber,
-            // $invoiceNumber=>$invoiceNumber,
-    //        $orgAccountBalance=>$orgAccountBalance,
-    //        $thirdPartyTransID=>$thirdPartyTransID,
-     //       $MSISDN=>$MSISDN,
-     //       $firstName=>$firstName,
-    //        $lastName=>$lastName,
-    //        $middleName=>$middleName,
-    //        $transID=>$transID,
-    //        $transactionType=>$transactionType
+//        $result=[
+//            $transTime=>$transTime,
+//            $transAmount=>$transAmount,
+//            $businessShortCode=>$businessShortCode,
+//            $billRefNumber=>$billRefNumber,
+//             $invoiceNumber=>$invoiceNumber,
+//            $orgAccountBalance=>$orgAccountBalance,
+//            $thirdPartyTransID=>$thirdPartyTransID,
+//            $MSISDN=>$MSISDN,
+//            $firstName=>$firstName,
+//            $lastName=>$lastName,
+//            $middleName=>$middleName,
+//            $transID=>$transID,
+//            $transactionType=>$transactionType
 
-    //    ];
+//        ];
         
-    //       return json_encode($result);
+          echo  json_encode( $callbackJSONData);
 
     
     
@@ -50,24 +50,24 @@ server with default setting (user 'root' with no password) */
 //}
  
 // Attempt insert query execution
-$sql = "INSERT INTO mpesa_pay (
-resultCode,
-resultDesc,
-merchantRequestID,
-checkoutRequestID,
-amount,
-mpesaReceiptNumber,
-balance,
-transactionDate,
-phoneNumber) VALUES ('$resultCode', '$resultDesc', '$merchantRequestID', '$checkoutRequestID', '$amount', '$mpesaReceiptNumber', '$balance','$transactionDate', '$phoneNumber' )";
+// $sql = "INSERT INTO mpesa_pay (
+// resultCode,
+// resultDesc,
+// merchantRequestID,
+// checkoutRequestID,
+// amount,
+// mpesaReceiptNumber,
+// balance,
+// transactionDate,
+// phoneNumber) VALUES ('$resultCode', '$resultDesc', '$merchantRequestID', '$checkoutRequestID', '$amount', '$mpesaReceiptNumber', '$balance','$transactionDate', '$phoneNumber' )";
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+// if ($conn->query($sql) === TRUE) {
+//   echo "New record created successfully";
+// } else {
+//   echo "Error: " . $sql . "<br>" . $conn->error;
+// }
 
-$conn->close();
+// $conn->close();
 
 //if(mysqli_query($link, $sql)){
    // echo "Records inserted successfully.";
