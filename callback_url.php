@@ -1,6 +1,8 @@
 
 <?php
 
+include_once('Auth/conn.php');
+
         $callbackJSONData=file_get_contents('php://input');
         $callbackData=json_decode($callbackJSONData);
         $resultCode=$callbackData->Body->stkCallback->ResultCode;
@@ -40,12 +42,12 @@
     
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "ubunifu", "Ubunifu@20", "streams");
+//$link = mysqli_connect("localhost", "ubunifu", "Ubunifu@20", "streams");
  
 // Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+//if($link === false){
+  //  die("ERROR: Could not connect. " . mysqli_connect_error());
+//}
  
 // Attempt insert query execution
 $sql = "INSERT INTO mpesa_pay (
@@ -58,11 +60,20 @@ mpesaReceiptNumber,
 balance,
 transactionDate,
 phoneNumber) VALUES ('$resultCode', '$resultDesc', '$merchantRequestID', '$checkoutRequestID', '$amount', '$mpesaReceiptNumber', '$balance','$transactionDate', '$phoneNumber' )";
-if(mysqli_query($link, $sql)){
-    echo "Records inserted successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+$conn->close();
+
+//if(mysqli_query($link, $sql)){
+   // echo "Records inserted successfully.";
+//} else{
+//    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+//}
 
 
  // sleep(100); // delay in seconds
@@ -74,7 +85,7 @@ if(mysqli_query($link, $sql)){
 
 
 // Close connection
-mysqli_close($link);
+//mysqli_close($link);
 
 /*
 $servername = "localhost";
