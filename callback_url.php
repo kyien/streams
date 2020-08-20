@@ -17,6 +17,7 @@
         
 
         echo 'callback starting....';
+
         echo $callbackData;
     //    echo $phoneNumber;
      //   $result=[
@@ -50,21 +51,21 @@ server with default setting (user 'root' with no password) */
 // }
  
 // Attempt insert query execution
-$sql = "INSERT INTO mpesa_pay (
-resultCode,
-resultDesc,
-merchantRequestID,
-checkoutRequestID,
-amount,
-mpesaReceiptNumber,
-balance,
-transactionDate,
-phoneNumber) VALUES ('$resultCode', '$resultDesc', '$merchantRequestID', '$checkoutRequestID', '$amount', '$mpesaReceiptNumber', '$balance','$transactionDate', '$phoneNumber' )";
-if(mysqli_query($link, $sql)){
-    echo "Records inserted successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
+// $sql = "INSERT INTO mpesa_pay (
+// resultCode,
+// resultDesc,
+// merchantRequestID,
+// checkoutRequestID,
+// amount,
+// mpesaReceiptNumber,
+// balance,
+// transactionDate,
+// phoneNumber) VALUES ('$resultCode', '$resultDesc', '$merchantRequestID', '$checkoutRequestID', '$amount', '$mpesaReceiptNumber', '$balance','$transactionDate', '$phoneNumber' )";
+// if(mysqli_query($link, $sql)){
+//     echo "Records inserted successfully.";
+// } else{
+//     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+// }
 
 
  // sleep(100); // delay in seconds
@@ -76,7 +77,7 @@ if(mysqli_query($link, $sql)){
 
 
 // Close connection
-mysqli_close($link);
+//mysqli_close($link);
 
 /*
 $servername = "localhost";
