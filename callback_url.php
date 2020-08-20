@@ -15,6 +15,8 @@
         $transactionDate=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
         $phoneNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[4]->Value;
         
+
+        echo 'callback starting....';
         echo $callbackData;
     //    echo $phoneNumber;
      //   $result=[
