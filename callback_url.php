@@ -15,7 +15,7 @@
         $transactionDate=$callbackData->Body->stkCallback->CallbackMetadata->Item[3]->Value;
         $phoneNumber=$callbackData->Body->stkCallback->CallbackMetadata->Item[4]->Value;
         
-        
+        echo $callbackData;
     //    echo $phoneNumber;
      //   $result=[
      //       $transTime=>$transTime,
@@ -40,12 +40,12 @@
     
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "ubunifu", "Ubunifu@20", "streams");
+//$link = mysqli_connect("localhost", "ubunifu", "Ubunifu@20", "streams");
  
 // Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+// if($link === false){
+//     die("ERROR: Could not connect. " . mysqli_connect_error());
+// }
  
 // Attempt insert query execution
 $sql = "INSERT INTO mpesa_pay (
@@ -104,7 +104,7 @@ if ($result->num_rows > 0) {
  */
 
 //$stkCallbackResponse = file_get_contents('php://input');
-file_put_contents('php://stderr', print_r($callbackData, TRUE))
+//file_put_contents('php://stderr', print_r($callbackData, TRUE))
 //   $logFile = "stkresponse.txt";
 //   $log = fopen($logFile, "a");
 //   fwrite($log, $callbackJSONData);
