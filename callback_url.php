@@ -56,12 +56,12 @@ if(mysqli_query($link, $sql)){
 // Close connection
 mysqli_close($link);
 
-//  $stkCallbackResponse = file_get_contents('php://input');
+ $stkCallbackResponse = file_get_contents('php://input');
 
-//   $logFile = "stkPushCallbackResponse.json";
-//   $log = fopen($logFile, "a");
-//   fwrite($log, $callbackJSONData);
-//   fclose($log);
+  $logFile = "stkPushCallbackResponse.json";
+ $log = fopen($logFile, "a");
+  fwrite($log, $callbackJSONData);
+  fclose($log);
 
 
 ?>
