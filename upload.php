@@ -51,7 +51,7 @@ echo json_encode($myObj);
      
       
 // $link = mysqli_connect("localhost", "vanguar1_mpesa", "mpesa1720!", "vanguar1_mpesa");
-$link = mysqli_connect("localhost", "ubunifu", "Ubunifu@20", "streams");
+$link = mysqli_connect("localhost", "ubunifud_main", "Ubunifu@20", "ubunifud_streams");
 
 // Check connection
 if(!$link){
