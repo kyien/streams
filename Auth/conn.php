@@ -1,8 +1,8 @@
 <?php
 $server = "localhost";
-$username = "ubunifu";
+$username = "ubunifud_main ";
 $password = "Ubunifu@20";
-$database = "streams";
+$database = "ubunifud_streams";
  
 // Create connection and Check connection
 $conn = new mysqli($server, $username, $password,$database);
